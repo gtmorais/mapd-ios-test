@@ -75,10 +75,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xgt-CD-Y0D">
-                                <rect key="frame" x="0.0" y="188" width="375" height="415"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="415" id="SiT-gD-UJs"/>
+                                    <constraint firstAttribute="height" constant="427" id="SiT-gD-UJs"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rows" id="EUJ-1T-Kkp" customClass="CustomTableViewCell" customModule="MAPD124_Test" customModuleProvider="target">
@@ -106,7 +106,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-p3-oR4">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-p3-oR4">
                                                     <rect key="frame" x="207" y="6" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="stepperChanged:" destination="EUJ-1T-Kkp" eventType="valueChanged" id="em4-25-S0H"/>
@@ -119,6 +119,7 @@
                                                 <constraint firstItem="3Xc-Iw-Ep3" firstAttribute="leading" secondItem="4l6-NP-wwC" secondAttribute="leadingMargin" constant="8" id="oBa-Ad-I7m"/>
                                                 <constraint firstItem="JQd-bJ-fRJ" firstAttribute="centerY" secondItem="3Xc-Iw-Ep3" secondAttribute="centerY" id="p5H-V0-FIm"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JQd-bJ-fRJ" secondAttribute="trailing" constant="21" id="wow-02-cha"/>
+                                                <constraint firstItem="IjF-p3-oR4" firstAttribute="top" secondItem="3Xc-Iw-Ep3" secondAttribute="top" id="z5H-Vf-jRj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -144,7 +145,7 @@
                             <constraint firstItem="dtG-3u-ijE" firstAttribute="trailing" secondItem="AfW-Xt-jVV" secondAttribute="trailing" id="Ofj-oT-nbR"/>
                             <constraint firstItem="kQq-zj-lsV" firstAttribute="leading" secondItem="DTr-8D-qiP" secondAttribute="trailing" constant="72" id="PDS-LE-ySf"/>
                             <constraint firstAttribute="trailing" secondItem="uew-vM-Tm1" secondAttribute="trailing" id="Rqg-BN-pwE"/>
-                            <constraint firstItem="kQq-zj-lsV" firstAttribute="top" secondItem="xgt-CD-Y0D" secondAttribute="bottom" constant="20" id="S3D-6O-n6J"/>
+                            <constraint firstItem="kQq-zj-lsV" firstAttribute="top" secondItem="xgt-CD-Y0D" secondAttribute="bottom" constant="8" id="S3D-6O-n6J"/>
                             <constraint firstItem="xgt-CD-Y0D" firstAttribute="leading" secondItem="uew-vM-Tm1" secondAttribute="leading" id="SMC-LH-IBK"/>
                             <constraint firstItem="xgt-CD-Y0D" firstAttribute="top" secondItem="q5y-Ty-Ucl" secondAttribute="bottom" constant="8" symbolic="YES" id="Vdg-XA-Ix9"/>
                             <constraint firstItem="9dU-cM-FHK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eqM-YN-d6O"/>
