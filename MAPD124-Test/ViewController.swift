@@ -13,17 +13,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var shoppingTableView: UITableView!
     @IBOutlet weak var listTitle: UITextField!
     
+    //add new product to shopping list tableview and reload data
     @IBAction func Add(_ sender: UIBarButtonItem) {
         Data.append(Item(item: "Product " + String(Data.count+1), qty: 0))
-        
         DispatchQueue.main.async {
             self.shoppingTableView.reloadData()
         }
-
     }
 
-    
     var Data = [Item]()
+    //load initial 5 items to array
     func loadData() -> Void
     {
         Data.append(Item(item: "Product 1", qty: 0))
@@ -45,6 +44,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
     
+    //cancel and clear screen
     @IBAction func cancelClick(_ sender: UIButton) {
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
@@ -59,25 +59,25 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
 
+    //return number of shopping list items
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Data.count
     }
     
+    //bind custom cell data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rows", for: indexPath) as! CustomTableViewCell
         cell.textItem.text = Data[indexPath.row].item
-
         return cell
     }
     
+    //delete shopping list item
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             Data.remove(at: indexPath.row)
             viewDidAppear(true)
         }
     }
-
-
 }
 
 class Item{

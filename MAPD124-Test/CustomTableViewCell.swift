@@ -16,6 +16,7 @@ class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var quantity: UILabel!
     
+    //increment quantity
     @IBAction func stepperChanged(_ sender: UIStepper) {
         quantity.text = Int(sender.value).description
     }
