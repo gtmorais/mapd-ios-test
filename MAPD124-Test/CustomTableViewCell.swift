@@ -11,8 +11,15 @@ import UIKit
 import Foundation
 
 class CustomTableViewCell: UITableViewCell {
-    @IBOutlet weak var itemText: UITextField!
+ 
+    @IBOutlet weak var textItem: UITextField!
+
+    @IBOutlet weak var quantity: UILabel!
     
+    @IBAction func stepperChanged(_ sender: UIStepper) {
+        quantity.text = Int(sender.value).description
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
